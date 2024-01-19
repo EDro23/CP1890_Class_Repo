@@ -1,3 +1,5 @@
+
+
 from classes import Product
 
 # Creating the products
@@ -8,8 +10,8 @@ product3 = Product('Economy Duct Tape, 60yds, Silver', 4.99, 25)
 
 program = True
 while True:
-    for i in (product1, product2, product3):
-        print(i.name)
+    for i, product in enumerate((product1, product2, product3),start=1):
+        print(f"{i} {product.name}")
 
     product_number = input("Enter product Number: ")
     if product_number == '1':
@@ -40,6 +42,7 @@ while True:
         print('Invalid Number')
     choice = input("View another product? (y/n): ")
     if choice == 'n':
+        print('Bye!')
         break
 
 
